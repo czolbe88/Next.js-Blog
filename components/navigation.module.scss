@@ -1,0 +1,15 @@
+#navRoot {
+  display: flex;
+  flex-direction: column;
+  margin-right: 64px;
+
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+
+  a:hover{
+    text-decoration: underline;
+  }
+
+}
