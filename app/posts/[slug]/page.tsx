@@ -3,12 +3,13 @@ import {parseMarkdown} from "@/services/markdown-service";
 
 interface PageProps {
     params: { slug: string },
-    searchParams: { shouldExport: boolean }
+    searchParams: { shouldExport: string }
 }
 
 export default async function Page(props: PageProps) {
+
     let raw: string = "";
-    if (props.searchParams.shouldExport) {
+    if (props.searchParams.shouldExport == "true") {
         raw = await exportFile(props.params.slug);
     } else {
         raw = await getFile(props.params.slug)
