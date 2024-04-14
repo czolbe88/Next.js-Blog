@@ -6,7 +6,7 @@ import matter from "gray-matter";
 const markdownSamplePage = async () => {
 
     // path is relative to where the script was started from
-    const fileContents = fs.readFileSync("./markdown/posts/this is a sample1", 'utf8');
+    const fileContents = fs.readFileSync("./markdown/list-posts/this is a sample1", 'utf8');
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);

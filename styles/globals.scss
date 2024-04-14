@@ -1,9 +1,13 @@
 @import "common";
 
 html {
+  //background-image: url("/background.png");
+  //background-position: center;
+
   body {
-    margin: 0;
-    padding: 32px;
+    margin: 0 auto;
+    padding-top: 32px;
+    max-width: 1120px;
     color: $primaryColor;
   }
 }

@@ -8,7 +8,7 @@ export const Navigation = () => {
         <div id={styles.navRoot}>
             <Image id={styles.profileImg} width={103} height={137} src={"/profile.jpg"} alt={"Profile image"}></Image>
             <h1><Link href={"/"}>About</Link></h1>
-            <h1><Link href={"/posts"}>Writing</Link></h1>
+            <h1><Link href={"/list-posts"}>Writing</Link></h1>
         </div>
     )
 
