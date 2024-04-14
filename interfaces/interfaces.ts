@@ -6,7 +6,6 @@ export interface PostMetada {
     size: number;
     trashed: boolean;
     mimeType: string;
-    shouldDisplay: boolean;
 }
 
 export interface Post {

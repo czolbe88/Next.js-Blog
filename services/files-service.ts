@@ -9,7 +9,6 @@ const pagesFolder = process.env.PAGES_FOLDER_ID;
 //Alexiad > Posts
 const postsFolder = process.env.POSTS_FOLDER_ID;
 
-
 const listPosts = async () => {
     const fields = 'nextPageToken, files(id, name, createdTime, webContentLink, size, trashed, mimeType)';
     const posts = await driveService.files.list({
@@ -18,13 +17,7 @@ const listPosts = async () => {
         spaces: 'drive',
         orderBy: 'createdTime',
     });
-    const postMetadataList = posts.data.files as unknown as PostMetada[];
-    postMetadataList.forEach(meta => {
-        if ("text/markdown" == meta.mimeType) {
-            meta.shouldDisplay = true;
-        }
-    })
-    return postMetadataList;
+    return posts.data.files as unknown as PostMetada[];
 }
 
 const getFile = async (id: String) => {
@@ -33,6 +26,12 @@ const getFile = async (id: String) => {
     return file.data as string;
 }
 
+const exportFile = async (id: String) => {
+    //@ts-ignore
+    const file: GaxiosResponse = await driveService.files.export({fileId: id, mimeType: "text/plain"})
+    return file.data as string;
+}
 
-export {listPosts, getFile};
+
+export {listPosts, getFile, exportFile};
 
