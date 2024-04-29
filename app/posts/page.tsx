@@ -9,8 +9,6 @@ const post = async () => {
     const GOOGLE_APPS_DOC_TYPE = "application/vnd.google-apps.document";
     const ACCEPTED_MIME_TYPES = ["text/markdown", GOOGLE_APPS_DOC_TYPE]
 
-    console.log({posts})
-
     return (<div>
         {/*<h1>Writing</h1>*/}
         <div>
@@ -25,6 +23,8 @@ const post = async () => {
                                         query: {shouldExport: post.mimeType == GOOGLE_APPS_DOC_TYPE}
                                     }} prefetch={true}>{post.name}</Link>
                                 </h2>
+
+                                <h6>{post.createdTime}</h6>
                             </div> : null
                     )
                 }

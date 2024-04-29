@@ -1,4 +1,8 @@
 .post {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
   a {
     color: unset;
     text-decoration: none;
@@ -6,5 +10,9 @@
 
   a:hover{
     text-decoration: underline;
+  }
+
+  h6{
+    align-self: center;
   }
 }

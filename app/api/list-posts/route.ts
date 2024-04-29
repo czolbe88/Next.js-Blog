@@ -1,4 +1,4 @@
-import {listPosts} from "@/services/files-service";
+import {listImages, listImagesByName} from "@/services/files-service";
 
 interface Post {
     id: String,
@@ -11,8 +11,9 @@ used for testing only
 export async function GET() {
 
 
-    const list = await listPosts();
+    const listByName = await listImagesByName("post-1-image-2.png");
+    const listAllImages = await listImages();
 
-    return Response.json({results: {list}});
+    return Response.json({results: {listByName, listAllImages}});
 
 }
