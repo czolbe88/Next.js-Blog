@@ -40,12 +40,10 @@ export async function parseMarkdown(rawStr: string): Promise<Post> {
             // }
             if(images.length > 0){
                 newSrc = await getDataUrlFromImageUrl(images[0].thumbnailLink);
-                console.log({newSrc})
                 htmlContent = htmlContent.replaceAll(oldSrc, newSrc);
             }
         }
     }
-    console.log({htmlContent})
 
     return {
         title,

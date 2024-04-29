@@ -23,7 +23,7 @@ export default async function Page(props: PageProps) {
                 {/*<p>{parsedMd.category}</p>*/}
             </div>
 
-            <div dangerouslySetInnerHTML={{__html: parsedMd.htmlContent}}/>
+            <div className={styles.postBody} dangerouslySetInnerHTML={{__html: parsedMd.htmlContent}}/>
         </div>
     )
 
