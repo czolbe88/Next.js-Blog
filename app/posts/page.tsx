@@ -24,7 +24,7 @@ const post = async () => {
                                     }} prefetch={true}>{post.name}</Link>
                                 </h2>
 
-                                <h6>{post.createdTime}</h6>
+                                <h3>{post.createdTime}</h3>
                             </div> : null
                     )
                 }

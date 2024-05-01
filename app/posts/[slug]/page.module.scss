@@ -1,18 +1,27 @@
-.postHeader{
+.postHeader {
   display: flex;
   flex-direction: row;
 
-  p{
+  p {
     text-align: center;
     align-items: center;
   }
 }
 
 
-.postBody{
+.postBody {
 
-  img{
+  p {
+    line-height: 24px;
+  }
+
+  img {
     width: 100%;
+  }
+
+  pre {
+    background-color: whitesmoke;
+    padding: 16px;
   }
 
 }
