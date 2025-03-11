@@ -3,6 +3,7 @@ import {PostMetada} from "@/interfaces/interfaces";
 import Link from "next/link";
 import styles from "./page.module.scss";
 
+export const fetchCache = 'force-no-store';
 const post = async () => {
 
     const posts = await listPosts();
